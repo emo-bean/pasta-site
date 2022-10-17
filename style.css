@@ -1,8 +1,31 @@
-@import 
-url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
 @font-face {
-    font-family: jean;
-    src: url("fonts/LynoJean.otf")format("otf");
+    font-family: 'lynojean';
+    src: url('fonts/lynojean-webfont.woff2') format('woff2'),
+         url('fonts/lynojean-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'lynoulys';
+    src: url('fonts/lynoulys-webfont.woff2') format('woff2'),
+         url('fonts/lynoulys-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'lynowalt';
+    src: url('fonts/lynowalt-webfont.woff2') format('woff2'),
+         url('fonts/lynowalt-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'lynostan';
+    src: url('fonts/lynostan-webfont.woff2') format('woff2'),
+         url('fonts/lynostan-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 a{
     text-decoration: none;
@@ -12,10 +35,29 @@ a{
 }
 body{
     font-family: 'Inter';
+    font-weight: 200;
+}
+main{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+h3{
+    font-family: 'Inter';
+    font-weight: 500;
 }
 .penne-timer{
-    padding: 20px;
+    font-family: 'lynoulys';
+    font-size: 100px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
     display: inline-block;
+    width: 200px;
+    min-height: 200px;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+    background: black;
+    color: white;
 }
 .penne-button{
     background: white;
@@ -24,6 +66,8 @@ body{
     position: absolute;
     bottom: 100px;
     left: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 hr{
     box-shadow: none;
@@ -32,9 +76,8 @@ hr{
 main{
     position: relative;
 }
-p{
-    font-family: 'Inter';
-
+nav{
+    padding-left: 0px;
 }
 nav ul {
     display: flex;
@@ -44,13 +87,14 @@ nav ul {
 nav img {
     width: 75px;
 }
+.home{
+    width: 40px;
+    padding-right: 50 px;
+}
 header {
     display: flex;
     justify-content: space-between;
 }
 header .left{
     padding-right: 100px;
-}
-.active {
-    border-bottom: 1px solid black;
 }
