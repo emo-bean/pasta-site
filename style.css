@@ -1,0 +1,56 @@
+@import 
+url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
+@font-face {
+    font-family: jean;
+    src: url("fonts/LynoJean.otf")format("otf");
+}
+a{
+    text-decoration: none;
+}
+.rotini h1{
+    font-family: jean;
+}
+body{
+    font-family: 'Inter';
+}
+.penne-timer{
+    padding: 20px;
+    display: inline-block;
+}
+.penne-button{
+    background: white;
+    border: 1px solid black;
+    color: black;
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+}
+hr{
+    box-shadow: none;
+    border: 1px solid black;
+}
+main{
+    position: relative;
+}
+p{
+    font-family: 'Inter';
+
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+nav img {
+    width: 75px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+header .left{
+    padding-right: 100px;
+}
+.active {
+    border-bottom: 1px solid black;
+}
