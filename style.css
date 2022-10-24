@@ -30,9 +30,6 @@
 a{
     text-decoration: none;
 }
-.rotini h1{
-    font-family: jean;
-}
 body{
     font-family: 'Inter';
     font-weight: 200;
@@ -45,21 +42,34 @@ h3{
     font-family: 'Inter';
     font-weight: 500;
 }
-.penne-timer{
+.timer{
     font-family: 'lynoulys';
     font-size: 100px;
     padding-top: 20px;
     padding-left: 50px;
     padding-right: 50px;
     display: inline-block;
-    width: 200px;
+    width: 300px;
     min-height: 200px;
-    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
-    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
     background: black;
     color: white;
 }
-.penne-button{
+.penne .timer{
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+}
+.spaghetti .timer{
+    font-family: lynostan;
+}
+.rotini .timer{
+    font-family: lynojean;
+    border-radius: 100px;
+}
+.cellentani .timer{
+    font-family: lynowalt;
+    border-radius: 0px 100px 0px 0px;
+}
+.button{
     background: white;
     border: 1px solid black;
     color: black;
@@ -68,6 +78,16 @@ h3{
     left: 100px;
     padding-left: 15px;
     padding-right: 15px;
+}
+.penne .button{
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+}
+.rotini .button{
+    border-radius: 25px;
+}
+.cellentani .button{
+    border-radius: 0px 25px 0px 0px;
 }
 hr{
     box-shadow: none;
@@ -87,6 +107,9 @@ nav ul {
 nav img {
     width: 75px;
 }
+.home top img{
+    width: 100vw;
+}
 .home{
     width: 40px;
     padding-right: 50 px;
@@ -97,4 +120,17 @@ header {
 }
 header .left{
     padding-right: 100px;
+}
+links{ 
+    display: flex;
+    align-items: center;
+}
+links img{ 
+    width: 25vw
+}
+recipe{
+    display: flex;
+}
+footer img{
+    width: 100vw;
 }
