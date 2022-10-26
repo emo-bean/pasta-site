@@ -1,32 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spaghetti</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="spaghetti">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="spaghetti" onload="countdown();">
     <nav>
-        <ul>
-            <li><a href="index.html"><img src="images/home.png" alt="" class="home"></a></li>
-            <li><a href="penne.html"><img src="images/penne.png" alt=""></a></li>
-            <li><a href="rotini.html"><img src="images/rotini.png" alt=""></a></li>
-            <li><a href="cellentani.html"><img src="images/cellentani.png" alt=""></a></li>
-        </ul>
+      <ul>
+        <li>
+          <a href="index.html"><img src="images/home.png" alt="" class="home" /></a>
+        </li>
+        <li>
+          <a href="penne.html"><img src="images/penne.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="rotini.html"><img src="images/rotini.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="cellentani.html"><img src="images/cellentani.png" alt="" /></a>
+        </li>
+      </ul>
     </nav>
     <main>
-    <header>
+      <header>
         <div class="left">
-        <h3>Why I Like It</h3>
-        <p class="left">Spaghetti is perfect for its lack of portion control. The unpredictable nature of choosing how much to boil, the uncontrollable bite size as you twirl it endlessly onto your fork, there’s just no way to know how much you’re getting until you’re finished. Spaghetti is perfect for those days that you would rather leave your meal to chance.</p>
-        <hr>
+          <h3>Why I Like It</h3>
+          <p class="left">Spaghetti is perfect for its lack of portion control. The unpredictable nature of choosing how much to boil, the uncontrollable bite size as you twirl it endlessly onto your fork, there’s just no way to know how much you’re getting until you’re finished. Spaghetti is perfect for those days that you would rather leave your meal to chance.</p>
+          <hr />
         </div>
-        <div class="timer">00:00</div>
-    </header>
-    <img src="" alt="">
-    <div class="button"><p>buy it</p></div>
+        <div class="timer"><input id="minutes" type="text" />:<input id="seconds" type="text" /></div>
+      </header>
+      <img src="" alt="" />
+      <div class="button"><p>buy it</p></div>
     </main>
-</body>
+    <script>
+      //set minutes
+      var mins = 10
+
+      //calculate the seconds
+      var secs = mins * 60
+
+      //countdown function is evoked when page is loaded
+      function countdown() {
+        setTimeout('Decrement()', 60)
+      }
+
+      //Decrement function decrement the value.
+      function Decrement() {
+        if (document.getElementById) {
+          minutes = document.getElementById('minutes')
+          seconds = document.getElementById('seconds')
+
+          //if less than a minute remaining
+          //Display only seconds value.
+          if (seconds < 59) {
+            seconds.value = secs
+          }
+
+          //Display both minutes and seconds
+          //getminutes and getseconds is used to
+          //get minutes and seconds
+          else {
+            minutes.value = getminutes()
+            seconds.value = getseconds()
+          }
+          //when less than a minute remaining
+          //colour of the minutes and seconds
+          //changes to red
+          if (mins < 1) {
+            minutes.style.color = 'red'
+            seconds.style.color = 'red'
+          }
+          //if seconds becomes zero,
+          //then page alert time up
+          if (mins < 0) {
+            alert('time up')
+            minutes.value = 0
+            seconds.value = 0
+          }
+          //if seconds > 0 then seconds is decremented
+          else {
+            secs--
+            setTimeout('Decrement()', 1000)
+          }
+        }
+      }
+
+      function getminutes() {
+        //minutes is seconds divided by 60, rounded down
+        mins = Math.floor(secs / 60)
+        return mins
+      }
+
+      function getseconds() {
+        //take minutes remaining (as seconds) away
+        //from total seconds remaining
+        return secs - Math.round(mins * 60)
+      }
+    </script>
+  </body>
 </html>

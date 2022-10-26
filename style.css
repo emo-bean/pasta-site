@@ -1,136 +1,153 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
 @font-face {
-    font-family: 'lynojean';
-    src: url('fonts/lynojean-webfont.woff2') format('woff2'),
-         url('fonts/lynojean-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'lynojean';
+  src: url('fonts/lynojean-webfont.woff2') format('woff2'), url('fonts/lynojean-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'lynoulys';
-    src: url('fonts/lynoulys-webfont.woff2') format('woff2'),
-         url('fonts/lynoulys-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'lynoulys';
+  src: url('fonts/lynoulys-webfont.woff2') format('woff2'), url('fonts/lynoulys-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'lynowalt';
-    src: url('fonts/lynowalt-webfont.woff2') format('woff2'),
-         url('fonts/lynowalt-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'lynowalt';
+  src: url('fonts/lynowalt-webfont.woff2') format('woff2'), url('fonts/lynowalt-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'lynostan';
-    src: url('fonts/lynostan-webfont.woff2') format('woff2'),
-         url('fonts/lynostan-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'lynostan';
+  src: url('fonts/lynostan-webfont.woff2') format('woff2'), url('fonts/lynostan-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-body{
-    font-family: 'Inter';
-    font-weight: 200;
+body {
+  font-family: 'Inter';
+  font-weight: 200;
+  margin: 0;
 }
-main{
-    padding-left: 100px;
-    padding-right: 100px;
+main {
+  padding-left: 100px;
+  padding-right: 100px;
 }
-h3{
-    font-family: 'Inter';
-    font-weight: 500;
+h3 {
+  font-family: 'Inter';
+  font-weight: 500;
 }
-.timer{
-    font-family: 'lynoulys';
-    font-size: 100px;
-    padding-top: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-    display: inline-block;
-    width: 300px;
-    min-height: 200px;
-    background: black;
-    color: white;
+img {
+  width: 100%;
 }
-.penne .timer{
-    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
-    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+.timer,
+.timer input[type='text'] {
+  border: 0;
+  font-family: 'lynoulys';
+  font-size: 100px;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: inline-block;
+  width: 300px;
+  min-height: 200px;
+  background: black;
+  color: white;
 }
-.spaghetti .timer{
-    font-family: lynostan;
+.penne .timer {
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
 }
-.rotini .timer{
-    font-family: lynojean;
-    border-radius: 100px;
+.spaghetti .timer {
+  font-family: lynostan;
 }
-.cellentani .timer{
-    font-family: lynowalt;
-    border-radius: 0px 100px 0px 0px;
+.rotini .timer {
+  font-family: lynojean;
+  border-radius: 100px;
 }
-.button{
-    background: white;
-    border: 1px solid black;
-    color: black;
-    position: absolute;
-    bottom: 100px;
-    left: 100px;
-    padding-left: 15px;
-    padding-right: 15px;
+.cellentani .timer {
+  font-family: lynowalt;
+  border-radius: 0px 100px 0px 0px;
 }
-.penne .button{
-    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
-    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+.button {
+  background: white;
+  border: 1px solid black;
+  color: black;
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-.rotini .button{
-    border-radius: 25px;
+.penne .button {
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
 }
-.cellentani .button{
-    border-radius: 0px 25px 0px 0px;
+.rotini .button {
+  border-radius: 25px;
 }
-hr{
-    box-shadow: none;
-    border: 1px solid black;
+.cellentani .button {
+  border-radius: 0px 25px 0px 0px;
 }
-main{
-    position: relative;
+hr {
+  box-shadow: none;
+  border: 1px solid black;
 }
-nav{
-    padding-left: 0px;
+main {
+  position: relative;
+}
+nav {
+  padding-left: 0px;
 }
 nav ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
+  display: flex;
+  list-style: none;
+  align-items: center;
 }
 nav img {
-    width: 75px;
+  width: 75px;
 }
-.home top img{
-    width: 100vw;
+.home .top img {
+  width: 100vw;
 }
-.home{
-    width: 40px;
-    padding-right: 50 px;
+.home {
+  width: 40px;
+  padding-right: 50px;
 }
 header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  width: 80%;
+  margin: auto;
 }
-header .left{
-    padding-right: 100px;
+header div {
+  flex: 1;
 }
-links{ 
-    display: flex;
-    align-items: center;
+header .left {
+  padding-right: 100px;
+  border-right: 1px solid black;
 }
-links img{ 
-    width: 25vw
+nav {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: auto;
 }
-recipe{
-    display: flex;
+nav img {
+  width: 25vw;
 }
-footer img{
-    width: 100vw;
+.recipe {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+footer {
+  margin: 0;
+  padding: 0;
+}
+footer img {
+  width: 100vw;
 }
