@@ -129,15 +129,20 @@ header div {
 header .left {
   padding-right: 100px;
   border-right: 1px solid black;
+  flex: .5;
 }
-nav {
+.homepage header .left{
+  padding-top: 30px;
+}
+.homepage nav {
   display: flex;
   align-items: center;
   width: 80%;
   margin: auto;
+  border-bottom: 1px solid black;
 }
-nav img {
-  width: 25vw;
+.homepage nav img {
+  width: 20vw;
 }
 .recipe {
   display: flex;
