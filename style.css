@@ -68,13 +68,20 @@ img {
   font-family: 'lynoulys';
   font-size: 100px;
   padding-top: 10px;
-  padding-left: 25px;
+  padding-left: 5px;
   padding-right: 25px;
   display: inline-block;
   width: 300px;
   min-height: 150px;
   background: black;
   color: white;
+}
+#minutes{
+text-align: right;
+padding-left: 0;
+}
+.timer{
+  text-align: center;
 }
 input{
   max-width: 125px;
@@ -98,7 +105,10 @@ input{
 .cellentani .timer input{
   font-family: lynowalt;
 } 
-.button {
+.button{
+  filter: drop-shadow(1px 0px 0px black)
+}
+.button a{
   background: white;
   border: 1px solid black;
   color: black;
@@ -108,18 +118,18 @@ input{
   padding-left: 15px;
   padding-right: 15px;
 }
-.button:hover{
+.button a:hover{
   background: black;
   color: white;
 }
-.penne .button {
+.penne .button a{
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
 }
-.rotini .button {
+.rotini .button a{
   border-radius: 0px 25px 25px 0px;
 }
-.cellentani .button {
+.cellentani .button a{
   border-radius: 0px 25px 0px 0px;
 }
 hr {
