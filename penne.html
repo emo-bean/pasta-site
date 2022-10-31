@@ -23,10 +23,75 @@
         <p class="left">Penne has much better structural integrity than any of the other shapes I've tried. It has all the tubular appeal of rigatoni but it doesn’t get stuck to the bottom of the pot as often. It’s the best choice when you’re looking for some stability in your meal as well as an overall geometric feel to each bite.</p>
         <hr>
         </div>
-        <div class="timer">00:00</div>
+        <div class="timer"><input id="minutes" type="text" />:<input id="seconds" type="text" /></div>
     </header>
-    <img src="" alt="">
+    <img class="big" src="images/big-penne.png" alt="">
     <div class="button"><p>buy it</p></div>
     </main>
+    <script>
+        //set minutes
+        var mins = 10
+  
+        //calculate the seconds
+        var secs = mins * 60
+  
+        //countdown function is evoked when page is loaded
+        function countdown() {
+          setTimeout('Decrement()', 60)
+        }
+  
+        //Decrement function decrement the value.
+        function Decrement() {
+          if (document.getElementById) {
+            minutes = document.getElementById('minutes')
+            seconds = document.getElementById('seconds')
+  
+            //if less than a minute remaining
+            //Display only seconds value.
+            if (seconds < 59) {
+              seconds.value = secs
+            }
+  
+            //Display both minutes and seconds
+            //getminutes and getseconds is used to
+            //get minutes and seconds
+            else {
+              minutes.value = getminutes()
+              seconds.value = getseconds()
+            }
+            //when less than a minute remaining
+            //colour of the minutes and seconds
+            //changes to red
+            if (mins < 1) {
+              minutes.style.color = 'red'
+              seconds.style.color = 'red'
+            }
+            //if seconds becomes zero,
+            //then page alert time up
+            if (mins < 0) {
+              alert('time up')
+              minutes.value = 0
+              seconds.value = 0
+            }
+            //if seconds > 0 then seconds is decremented
+            else {
+              secs--
+              setTimeout('Decrement()', 1000)
+            }
+          }
+        }
+  
+        function getminutes() {
+          //minutes is seconds divided by 60, rounded down
+          mins = Math.floor(secs / 60)
+          return mins
+        }
+  
+        function getseconds() {
+          //take minutes remaining (as seconds) away
+          //from total seconds remaining
+          return secs - Math.round(mins * 60)
+        }
+      </script>
 </body>
 </html>
