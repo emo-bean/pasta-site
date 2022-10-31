@@ -77,23 +77,27 @@ img {
   color: white;
 }
 input{
-  max-width: 150px;
+  max-width: 125px;
 }
 .penne .timer {
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
 }
-.spaghetti .timer {
+.spaghetti .timer input{
   font-family: lynostan;
 }
 .rotini .timer {
-  font-family: lynojean;
   border-radius: 0px 100px 100px 0px;
 }
+.rotini .timer input{
+  font-family: lynojean;
+}
 .cellentani .timer {
-  font-family: lynowalt;
   border-radius: 0px 100px 0px 0px;
 }
+.cellentani .timer input{
+  font-family: lynowalt;
+} 
 .button {
   background: white;
   border: 1px solid black;
@@ -155,10 +159,13 @@ header {
 header div {
   flex: 1;
 }
-header .left {
+header .left{
   padding-right: 100px;
-  border-right: 1px solid black;
   flex: .5;
+}
+header .left p{
+  padding-right: 8px;
+  border-right: 1px solid black;
 }
 .homepage header .left{
   padding-top: 30px;
