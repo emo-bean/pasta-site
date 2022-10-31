@@ -23,6 +23,22 @@
   font-weight: normal;
   font-style: normal;
 }
+.spaghetti h1{
+  font-family: lynostan;
+  padding-left: 10px;
+}
+.rotini h1{
+  font-family: lynojean;
+  padding-left: 10px;
+}
+.cellentani h1{
+  font-family: lynowalt;
+  padding-left: 10px;
+}
+.penne h1{
+  font-family: lynoulys;
+  padding-left: 10px;
+}
 a {
   text-decoration: none;
   color: black;
