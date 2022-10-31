@@ -88,7 +88,7 @@ input{
 }
 .rotini .timer {
   font-family: lynojean;
-  border-radius: 100px;
+  border-radius: 0px 100px 100px 0px;
 }
 .cellentani .timer {
   font-family: lynowalt;
@@ -113,7 +113,7 @@ input{
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
 }
 .rotini .button {
-  border-radius: 25px;
+  border-radius: 0px 25px 25px 0px;
 }
 .cellentani .button {
   border-radius: 0px 25px 0px 0px;
